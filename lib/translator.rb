@@ -1,4 +1,5 @@
 require "yaml"
+require "pry"
 
 # load_library loads a file in the following format:
 # {
@@ -65,7 +66,7 @@ def get_english_meaning(file, japanese_emoticon)
     #   ...
     # }
 
-    return expression.to_s if emoticon_hash[:japanese] == japanese_emoticon
+    return expression if emoticon_hash[:japanese] == japanese_emoticon
   end
 
   # Explicit return this if the above was not found/returned
