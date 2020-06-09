@@ -64,31 +64,19 @@ end
 #     #   "angry"=>{:english=>">:(", :japanese=>"ヽ(ｏ`皿′ｏ)ﾉ"},
 #     #   ...
 #     # }
-# 
+#
 #     return expression.to_s if emoticon_hash[:japanese] == japanese_emoticon
 #   end
-# 
+#
 #   # Explicit return this if the above was not found/returned
 #   "Sorry, that emoticon was not found"
-# 
+#
 # end
 
 
 def get_english_meaning(file, japanese_emoticon)
   emoticon_hash = load_library(file_path)
-end 
+end
 
 
 pp get_english_meaning("emoticons.yml", "☜(⌒▽⌒)☞")
-
-
-
-
-
-
-
-
-
-
-
-
