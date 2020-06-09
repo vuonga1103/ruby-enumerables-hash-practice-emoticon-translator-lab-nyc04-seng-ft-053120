@@ -1,4 +1,5 @@
 require "yaml"
+require "pry"
 
 # load_library loads a file in the following format:
 # {
@@ -76,7 +77,6 @@ end
 
 def get_english_meaning(file, japanese_emoticon)
   emoticon_hash = load_library(file_path)
+  binding.pry
+  "hello"
 end
-
-
-pp get_english_meaning("./emoticons.yml", "☜(⌒▽⌒)☞")
