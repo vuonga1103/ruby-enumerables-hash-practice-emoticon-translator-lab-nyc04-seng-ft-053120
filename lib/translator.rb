@@ -57,18 +57,38 @@ end
 
 
 # get_english_meaning should return the english expression (i.e. "angel", "angry", etc.) given a japanese emoticon
+# def get_english_meaning(file, japanese_emoticon)
+#   load_library(file).each do |expression, emoticon_hash|
+#     # load_library(file) looks like...
+#     # {"angel"=>{:english=>"O:)", :japanese=>"☜(⌒▽⌒)☞"},
+#     #   "angry"=>{:english=>">:(", :japanese=>"ヽ(ｏ`皿′ｏ)ﾉ"},
+#     #   ...
+#     # }
+# 
+#     return expression.to_s if emoticon_hash[:japanese] == japanese_emoticon
+#   end
+# 
+#   # Explicit return this if the above was not found/returned
+#   "Sorry, that emoticon was not found"
+# 
+# end
+
+
 def get_english_meaning(file, japanese_emoticon)
-  load_library(file).each do |expression, emoticon_hash|
-    # load_library(file) looks like...
-    # {"angel"=>{:english=>"O:)", :japanese=>"☜(⌒▽⌒)☞"},
-    #   "angry"=>{:english=>">:(", :japanese=>"ヽ(ｏ`皿′ｏ)ﾉ"},
-    #   ...
-    # }
+  emoticon_hash = load_library(file_path)
+end 
 
-    return expression.to_s if emoticon_hash[:japanese] == japanese_emoticon
-  end
 
-  # Explicit return this if the above was not found/returned
-  "Sorry, that emoticon was not found"
+pp get_english_meaning("emoticons.yml", "☜(⌒▽⌒)☞")
 
-end
+
+
+
+
+
+
+
+
+
+
+
