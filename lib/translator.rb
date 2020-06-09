@@ -80,4 +80,4 @@ def get_english_meaning(file, japanese_emoticon)
 end
 
 
-pp get_english_meaning("./lib/emoticons.yml", "☜(⌒▽⌒)☞")
+pp get_english_meaning("emoticons.yml", "☜(⌒▽⌒)☞")
